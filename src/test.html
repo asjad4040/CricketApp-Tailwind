@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout with Overlay</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    position: relative;
+    display: inline-block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #000;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px; /* Adjust to match the width of both table cells combined */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7; /* Further reduce opacity if needed */
+}
+
+</style>
+<body>
+    <div class="table-container">
+        <table>
+            <tr>
+                <td class="cell">Cell 1</td>
+                <td class="cell">Cell 2</td>
+            </tr>
+        </table>
+        <div class="overlay">Overlay</div>
+    </div>
+</body>
+</html>
